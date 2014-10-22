@@ -1,5 +1,5 @@
 # Generic Monitoring library for Desktop applications:
-[![Version](http://img.shields.io/badge/version-1.0.4-blue.svg?)]() [![License](http://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT) ![Status](http://img.shields.io/badge/build-STABLE-green.svg) 
+[![Version](http://img.shields.io/badge/version-1.0.4-blue.svg?)](https://github.com/AndreaGhizzoni/Monitoring/releases/tag/v1.0.4) [![License](http://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT) ![Status](http://img.shields.io/badge/build-STABLE-green.svg) 
 [![Dependecies](http://img.shields.io/badge/dependency-Java 8-red.svg?)](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)
 
 ## Before to start...
