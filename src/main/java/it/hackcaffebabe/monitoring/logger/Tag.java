@@ -1,8 +1,7 @@
 package it.hackcaffebabe.monitoring.logger;
 
 /**
- * Enumerator to describe the level of log message.<br>
- * 
+ * Enumerator to describe the level of log message.
  * @author Andrea Ghizzoni. More info at andrea.ghz@gmail.com
  * @version 1.0
  */

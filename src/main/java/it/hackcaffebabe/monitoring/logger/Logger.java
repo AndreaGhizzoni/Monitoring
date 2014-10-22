@@ -6,10 +6,9 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
-
 /**
- * Simple singleton class to instance a logger.<br>
- * Use the code below to retrieve the same logger object into the project.
+ * Simple singleton class to instance a logger. Use the code below to retrieve
+ * the same logger object into the project.
  * <pre>{@code
  * Logger g = Logger.getInstance();
  * g.write( Tag.ERROR, "asD" ); //to write a log message on the print stream
@@ -17,7 +16,8 @@ import java.util.Set;
  * And to set the logger in Production mode:
  * <pre>{@code
  * g.disableTag(Tag.DEBUG);
- * g.setPrintStream( new PrintStream( new File( "~/a.log" ) ); //to set the stream on the log file
+ * //to set the stream on the log file
+ * g.setPrintStream( new PrintStream( new File( "~/a.log" ) );
  * }</pre>
  * 
  * @author Andrea Ghizzoni. More info at andrea.ghz@gmail.com
@@ -31,8 +31,7 @@ public final class Logger
 	private PrintStream printStream;
 
 	private static Logger logger;
-	private String messagePattern = "[%s] %s%-7s: %s\n";//[<date&hours>] <class.method caller> <tag>: <log>
-	/* The set of disable tag */
+    /* The set of disable tag */
 	private Set<Tag> disableTag = new HashSet<Tag>();
 	/* Flag to show the caller of write method */
 	private boolean showCaller = false;
@@ -52,9 +51,9 @@ public final class Logger
 		this.printStream = Logger.DEFAULT_PRINT_STREAM;
 	}
 
-//====================================================================================================//
+//==============================================================================
 // METHOD
-//====================================================================================================//		
+//==============================================================================
 	/**
 	 * Write a specific log message with tag {@link Tag}
 	 * @param tag {@link Tag} the tag of log message.
@@ -71,8 +70,9 @@ public final class Logger
 			StackTraceElement s = new Exception().getStackTrace()[1];
 			formatted = String.format( "%s.%s ", s.getClassName(), s.getMethodName() );
 		}
-		String date = new SimpleDateFormat( "yyyy-MM-dd HH:mm:ss.SSS" ).format( new Date() );
-		this.printStream.printf( this.messagePattern, date, formatted, tag.toString(), obj.toString() );
+		String date = new SimpleDateFormat( "yy-MM-dd HH:mm:ss.SSS" ).format( new Date() );
+        String mp = "[%s] %s%-7s: %s\n";
+        this.printStream.printf(mp, date, formatted, tag.toString(), obj.toString() );
 		this.printStream.flush();
 	}
 
@@ -94,12 +94,13 @@ public final class Logger
 		this.showCaller = b;
 	}
 
-//====================================================================================================//
+//==============================================================================
 // SETTER
-//====================================================================================================//
+//==============================================================================
 	/**
 	 * Sets the default print stream on witch will be write the log message.
-	 * @param printStream {@link PrintStream} the stream that will be write the log message.
+	 * @param printStream {@link PrintStream} the stream that will be write the
+     *                                       log message.
 	 * @throws IllegalArgumentException if printStream is null.
 	 */
 	public void setPrintStream(PrintStream printStream) throws IllegalArgumentException{
@@ -109,9 +110,9 @@ public final class Logger
 		this.printStream = printStream;
 	}
 
-//====================================================================================================//
+//==============================================================================
 // GETTER
-//====================================================================================================//
+//==============================================================================
 	/**
 	 * Returns the print stream that will be write all the log message.
 	 * @return {@link PrintStream} the print stream.

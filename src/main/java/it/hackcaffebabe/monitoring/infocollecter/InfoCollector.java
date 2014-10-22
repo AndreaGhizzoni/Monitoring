@@ -8,22 +8,23 @@ import java.util.Map;
 
 
 /**
- * This class collect all the hardware/software/jvm specifications and produce a json file.
- * This is a final class, so it can be used only in this way:
+ * This class collect all the hardware/software/jvm specifications and produce ]
+ * a json file. This is a final class, so it can be used only in this way:
  * <pre>{@code
  * FileWriter fw = new FileWriter( new File( "test.json" ) );
- * InfoCollecter.collect( fw );
+ * InfoCollector.collect( fw );
  * }</pre>
  *  
  * @author Andrea Ghizzoni. More info at andrea.ghz@gmail.com
  * @version 1.0
  */
-public final class InfoCollecter
+public final class InfoCollector
 {
-	private InfoCollecter(){}
+	private InfoCollector(){}
 
 	/**
-	 * This method collects data from {@link RuntimeMXBean} object and write a json file from the {@link FileWriter} given.
+	 * This method collects data from {@link RuntimeMXBean} object and write a
+     * json file from the {@link FileWriter} given.
 	 * @param fw {@link FileWriter} to write the data collected.
 	 * @throws IllegalArgumentException if argument given is null.
 	 * @throws IOException if there are errors while writing data.
